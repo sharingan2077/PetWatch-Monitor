@@ -1,14 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationNextFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/a_logo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="38dp"
+        android:text="Я - питомец...(Множественный выбор) (7 вариантов)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:background="@drawable/sh_login"
+        android:fontFamily="@font/roboto_bold"
+        android:hint="Владелец"
+        android:inputType="textCapSentences"
+        android:paddingStart="14dp"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="17dp"
+        android:text="Что привело вас в это приложение?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:background="@drawable/sh_login"
+        android:fontFamily="@font/roboto_bold"
+        android:hint="Мне нужно отслеживать... потому что"
+        android:inputType="textEmailAddress"
+        android:paddingStart="14dp"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="0.351"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Пароль"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:background="@drawable/sh_login"
+        android:fontFamily="@font/roboto_bold"
+        android:hint="******"
+        android:inputType="textPassword"
+        android:paddingStart="14dp"
+        android:paddingTop="4dp"
+        android:textColorHint="@color/grey"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+    <View
+        android:id="@+id/btn_registration"
+        android:layout_width="241dp"
+        android:layout_height="52dp"
+        android:background="@drawable/button_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Завершить!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_registration"
+        app:layout_constraintEnd_toEndOf="@+id/btn_registration"
+        app:layout_constraintStart_toStartOf="@+id/btn_registration"
+        app:layout_constraintTop_toTopOf="@+id/btn_registration" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

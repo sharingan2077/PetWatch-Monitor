@@ -1,14 +1,772 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChooseAnimalFragment">
+    android:background="@color/violate"
+    tools:context=".view.fragment.ChooseAnimalFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="71dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Выберите тип питомца"
+            android:textColor="#ffffff"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/v_dog"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_cat"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="44dp"
+            android:layout_height="42dp"
+            android:src="@drawable/dog"
+            app:layout_constraintBottom_toBottomOf="@+id/v_dog"
+            app:layout_constraintEnd_toEndOf="@+id/v_dog"
+            app:layout_constraintStart_toStartOf="@+id/v_dog"
+            app:layout_constraintTop_toTopOf="@id/v_dog" />
+
+        <TextView
+            android:id="@+id/tv_dog"
+            android:layout_width="83dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Собака"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_dog"
+            app:layout_constraintStart_toStartOf="@+id/v_dog"
+            app:layout_constraintTop_toBottomOf="@+id/v_dog" />
+
+        <View
+            android:id="@+id/v_cat"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_mouse"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_dog"
+            app:layout_constraintTop_toTopOf="@+id/v_dog" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/cat1"
+            app:layout_constraintBottom_toBottomOf="@+id/v_cat"
+            app:layout_constraintEnd_toEndOf="@+id/v_cat"
+            app:layout_constraintStart_toStartOf="@+id/v_cat"
+            app:layout_constraintTop_toTopOf="@id/v_cat" />
+
+        <TextView
+            android:id="@+id/tv_cat"
+            android:layout_width="83dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Кошка"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_cat"
+            app:layout_constraintStart_toStartOf="@+id/v_cat"
+            app:layout_constraintTop_toBottomOf="@+id/v_cat" />
+
+        <View
+            android:id="@id/v_mouse"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_lizard"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_cat"
+            app:layout_constraintTop_toTopOf="@+id/v_cat" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mouse"
+            app:layout_constraintBottom_toBottomOf="@+id/v_mouse"
+            app:layout_constraintEnd_toEndOf="@+id/v_mouse"
+            app:layout_constraintStart_toStartOf="@+id/v_mouse"
+            app:layout_constraintTop_toTopOf="@id/v_mouse" />
+
+        <TextView
+            android:id="@+id/tv_mouse"
+            android:layout_width="60dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Мышь"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_mouse"
+            app:layout_constraintStart_toStartOf="@+id/v_mouse"
+            app:layout_constraintTop_toBottomOf="@+id/v_mouse" />
+
+        <View
+            android:id="@id/v_lizard"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_mouse"
+            app:layout_constraintTop_toTopOf="@+id/v_mouse" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/a_lizard"
+            app:layout_constraintBottom_toBottomOf="@+id/v_lizard"
+            app:layout_constraintEnd_toEndOf="@+id/v_lizard"
+            app:layout_constraintStart_toStartOf="@+id/v_lizard"
+            app:layout_constraintTop_toTopOf="@id/v_lizard" />
+
+        <TextView
+            android:id="@+id/tv_lizard"
+            android:layout_width="90dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Ящерица"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_lizard"
+            app:layout_constraintStart_toStartOf="@+id/v_lizard"
+            app:layout_constraintTop_toBottomOf="@+id/v_lizard" />
+
+        <View
+            android:id="@+id/v_fish"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_ferret"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dog" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fish"
+            app:layout_constraintBottom_toBottomOf="@+id/v_fish"
+            app:layout_constraintEnd_toEndOf="@+id/v_fish"
+            app:layout_constraintStart_toStartOf="@+id/v_fish"
+            app:layout_constraintTop_toTopOf="@id/v_fish" />
+
+        <TextView
+            android:id="@+id/tv_fish"
+            android:layout_width="60dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Рыба"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_fish"
+            app:layout_constraintStart_toStartOf="@+id/v_fish"
+            app:layout_constraintTop_toBottomOf="@+id/v_fish" />
+
+        <View
+            android:id="@+id/v_ferret"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_ermine"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_fish"
+            app:layout_constraintTop_toTopOf="@+id/v_fish" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/a_ferret"
+            app:layout_constraintBottom_toBottomOf="@+id/v_ferret"
+            app:layout_constraintEnd_toEndOf="@+id/v_ferret"
+            app:layout_constraintStart_toStartOf="@+id/v_ferret"
+            app:layout_constraintTop_toTopOf="@id/v_ferret" />
+
+        <TextView
+            android:id="@+id/tv_ferret"
+            android:layout_width="70dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Хорёк"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_ferret"
+            app:layout_constraintStart_toStartOf="@+id/v_ferret"
+            app:layout_constraintTop_toBottomOf="@+id/v_ferret" />
+
+        <View
+            android:id="@+id/v_ermine"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_snake"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_ferret"
+            app:layout_constraintTop_toTopOf="@+id/v_ferret" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/a_ermine"
+            app:layout_constraintBottom_toBottomOf="@+id/v_ermine"
+            app:layout_constraintEnd_toEndOf="@+id/v_ermine"
+            app:layout_constraintStart_toStartOf="@+id/v_ermine"
+            app:layout_constraintTop_toTopOf="@id/v_ermine" />
+
+        <TextView
+            android:id="@+id/tv_ermine"
+            android:layout_width="90dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Шиншилла"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_ermine"
+            app:layout_constraintStart_toStartOf="@+id/v_ermine"
+            app:layout_constraintTop_toBottomOf="@+id/v_ermine" />
+
+        <View
+            android:id="@+id/v_snake"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_ermine"
+            app:layout_constraintTop_toTopOf="@+id/v_ermine" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/snake"
+            app:layout_constraintBottom_toBottomOf="@+id/v_snake"
+            app:layout_constraintEnd_toEndOf="@+id/v_snake"
+            app:layout_constraintStart_toStartOf="@+id/v_snake"
+            app:layout_constraintTop_toTopOf="@id/v_snake" />
+
+        <TextView
+            android:id="@+id/tv_snake"
+            android:layout_width="60dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Змея"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_snake"
+            app:layout_constraintStart_toStartOf="@+id/v_snake"
+            app:layout_constraintTop_toBottomOf="@+id/v_snake" />
+
+        <View
+            android:id="@+id/v_turtle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_rabbit"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fish" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/turtle"
+            app:layout_constraintBottom_toBottomOf="@+id/v_turtle"
+            app:layout_constraintEnd_toEndOf="@+id/v_turtle"
+            app:layout_constraintStart_toStartOf="@+id/v_turtle"
+            app:layout_constraintTop_toTopOf="@id/v_turtle" />
+
+        <TextView
+            android:id="@+id/tv_turtle"
+            android:layout_width="90dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Черепаха"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_turtle"
+            app:layout_constraintStart_toStartOf="@+id/v_turtle"
+            app:layout_constraintTop_toBottomOf="@+id/v_turtle" />
+
+        <View
+            android:id="@+id/v_rabbit"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_guinea"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_turtle"
+            app:layout_constraintTop_toTopOf="@+id/v_turtle" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/rabbit"
+            app:layout_constraintBottom_toBottomOf="@+id/v_rabbit"
+            app:layout_constraintEnd_toEndOf="@+id/v_rabbit"
+            app:layout_constraintStart_toStartOf="@+id/v_rabbit"
+            app:layout_constraintTop_toTopOf="@id/v_rabbit" />
+
+        <TextView
+            android:id="@+id/tv_rabbit"
+            android:layout_width="70dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Кролик"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_rabbit"
+            app:layout_constraintStart_toStartOf="@+id/v_rabbit"
+            app:layout_constraintTop_toBottomOf="@+id/v_rabbit" />
+
+        <View
+            android:id="@+id/v_guinea"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_rabbit"
+            app:layout_constraintTop_toTopOf="@+id/v_rabbit" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/guinea_pig"
+            app:layout_constraintBottom_toBottomOf="@+id/v_guinea"
+            app:layout_constraintEnd_toEndOf="@+id/v_guinea"
+            app:layout_constraintStart_toStartOf="@+id/v_guinea"
+            app:layout_constraintTop_toTopOf="@id/v_guinea" />
+
+        <TextView
+            android:id="@+id/tv_guinea"
+            android:layout_width="150dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Морская свинка"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_guinea"
+            app:layout_constraintStart_toStartOf="@+id/v_guinea"
+            app:layout_constraintTop_toBottomOf="@+id/v_guinea" />
+
+        <View
+            android:id="@+id/v_horse"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_donkey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_turtle" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/horse"
+            app:layout_constraintBottom_toBottomOf="@+id/v_horse"
+            app:layout_constraintEnd_toEndOf="@+id/v_horse"
+            app:layout_constraintStart_toStartOf="@+id/v_horse"
+            app:layout_constraintTop_toTopOf="@id/v_horse" />
+
+        <TextView
+            android:id="@+id/tv_horse"
+            android:layout_width="90dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Лошадь"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_horse"
+            app:layout_constraintStart_toStartOf="@+id/v_horse"
+            app:layout_constraintTop_toBottomOf="@+id/v_horse" />
+
+
+        <View
+            android:id="@+id/v_donkey"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_pig"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_horse"
+            app:layout_constraintTop_toTopOf="@+id/v_horse" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/donkey"
+            app:layout_constraintBottom_toBottomOf="@+id/v_donkey"
+            app:layout_constraintEnd_toEndOf="@+id/v_donkey"
+            app:layout_constraintStart_toStartOf="@+id/v_donkey"
+            app:layout_constraintTop_toTopOf="@id/v_donkey" />
+
+        <TextView
+            android:id="@+id/tv_donkey"
+            android:layout_width="60dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Осел"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_donkey"
+            app:layout_constraintStart_toStartOf="@+id/v_donkey"
+            app:layout_constraintTop_toBottomOf="@+id/v_donkey" />
+
+        <View
+            android:id="@+id/v_pig"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_goat"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_donkey"
+            app:layout_constraintTop_toTopOf="@+id/v_donkey" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/pig"
+            app:layout_constraintBottom_toBottomOf="@+id/v_pig"
+            app:layout_constraintEnd_toEndOf="@+id/v_pig"
+            app:layout_constraintStart_toStartOf="@+id/v_pig"
+            app:layout_constraintTop_toTopOf="@id/v_pig" />
+
+        <TextView
+            android:id="@+id/tv_pig"
+            android:layout_width="80dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Свинья"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_pig"
+            app:layout_constraintStart_toStartOf="@+id/v_pig"
+            app:layout_constraintTop_toBottomOf="@+id/v_pig" />
+
+        <View
+            android:id="@+id/v_goat"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_pig"
+            app:layout_constraintTop_toTopOf="@+id/v_pig" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/goat"
+            app:layout_constraintBottom_toBottomOf="@+id/v_goat"
+            app:layout_constraintEnd_toEndOf="@+id/v_goat"
+            app:layout_constraintStart_toStartOf="@+id/v_goat"
+            app:layout_constraintTop_toTopOf="@id/v_goat" />
+
+        <TextView
+            android:id="@+id/tv_goat"
+            android:layout_width="60dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Коза"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_goat"
+            app:layout_constraintStart_toStartOf="@+id/v_goat"
+            app:layout_constraintTop_toBottomOf="@+id/v_goat" />
+
+
+        <View
+            android:id="@+id/v_sheep"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_cow"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_horse" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sheep"
+            app:layout_constraintBottom_toBottomOf="@+id/v_sheep"
+            app:layout_constraintEnd_toEndOf="@+id/v_sheep"
+            app:layout_constraintStart_toStartOf="@+id/v_sheep"
+            app:layout_constraintTop_toTopOf="@id/v_sheep" />
+
+        <TextView
+            android:id="@+id/tv_sheep"
+            android:layout_width="60dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Овца"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_sheep"
+            app:layout_constraintStart_toStartOf="@+id/v_sheep"
+            app:layout_constraintTop_toBottomOf="@+id/v_sheep" />
+
+        <View
+            android:id="@+id/v_cow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_bird"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_sheep"
+            app:layout_constraintTop_toTopOf="@+id/v_sheep" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/cow"
+            app:layout_constraintBottom_toBottomOf="@+id/v_cow"
+            app:layout_constraintEnd_toEndOf="@+id/v_cow"
+            app:layout_constraintStart_toStartOf="@+id/v_cow"
+            app:layout_constraintTop_toTopOf="@id/v_cow" />
+
+        <TextView
+            android:id="@+id/tv_cow"
+            android:layout_width="80dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Корова"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_cow"
+            app:layout_constraintStart_toStartOf="@+id/v_cow"
+            app:layout_constraintTop_toBottomOf="@+id/v_cow" />
+
+        <View
+            android:id="@+id/v_bird"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toStartOf="@+id/v_chicken"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_cow"
+            app:layout_constraintTop_toTopOf="@+id/v_cow" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/bird"
+            app:layout_constraintBottom_toBottomOf="@+id/v_bird"
+            app:layout_constraintEnd_toEndOf="@+id/v_bird"
+            app:layout_constraintStart_toStartOf="@+id/v_bird"
+            app:layout_constraintTop_toTopOf="@id/v_bird" />
+
+        <TextView
+            android:id="@+id/tv_bird"
+            android:layout_width="70dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Птица"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_bird"
+            app:layout_constraintStart_toStartOf="@+id/v_bird"
+            app:layout_constraintTop_toBottomOf="@+id/v_bird" />
+
+        <View
+            android:id="@+id/v_chicken"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/v_bird"
+            app:layout_constraintTop_toTopOf="@+id/v_bird" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/chicken"
+            app:layout_constraintBottom_toBottomOf="@+id/v_chicken"
+            app:layout_constraintEnd_toEndOf="@+id/v_chicken"
+            app:layout_constraintStart_toStartOf="@+id/v_chicken"
+            app:layout_constraintTop_toTopOf="@id/v_chicken" />
+
+        <TextView
+            android:id="@+id/tv_chicken"
+            android:layout_width="80dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Курица"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/v_chicken"
+            app:layout_constraintStart_toStartOf="@+id/v_chicken"
+            app:layout_constraintTop_toBottomOf="@+id/v_chicken" />
+
+        <View
+            android:id="@+id/v_duck"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/sh_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sheep" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/toy_duck"
+            app:layout_constraintBottom_toBottomOf="@+id/v_duck"
+            app:layout_constraintEnd_toEndOf="@+id/v_duck"
+            app:layout_constraintStart_toStartOf="@+id/v_duck"
+            app:layout_constraintTop_toTopOf="@id/v_duck" />
+
+        <TextView
+            android:id="@+id/tv_duck"
+            android:layout_width="60dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/sh_color_bk_corners_3"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:text="Утка"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/v_duck"
+            app:layout_constraintStart_toStartOf="@+id/v_duck"
+            app:layout_constraintTop_toBottomOf="@+id/v_duck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

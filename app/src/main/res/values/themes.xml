@@ -1,6 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.PetWatch" parent="Theme.Material3.DayNight.NoActionBar">
+<!--        <item name="colorButtonNormal">@color/pink_light</item>-->
+        <item name="colorPrimary">@color/pink_light</item>
+<!--        <item name="colorSecondary">@color/pink_light</item>-->
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>

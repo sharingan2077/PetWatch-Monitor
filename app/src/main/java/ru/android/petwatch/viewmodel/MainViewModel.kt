@@ -1,4 +1,16 @@
 package ru.android.petwatch.viewmodel
 
-class MainActivityViewModel {
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
+
+class MainViewModel(app: Application) : AndroidViewModel(app) {
+
+
+    var showToolBar = MutableLiveData<Boolean>()
+
+
+
+
+
 }

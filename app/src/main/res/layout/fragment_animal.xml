@@ -8,19 +8,23 @@
     tools:context=".view.fragment.AnimalFragment"
     android:background="@color/violate">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="24dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_animal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_plus" />
 
     <ImageView
+        android:id="@+id/btn_plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/arrow_back"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="34dp"
+        android:src="@drawable/plus"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -28,39 +32,39 @@
         android:id="@+id/tv_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="71dp"
+        android:layout_marginTop="272dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Создайте нового питомца"
+        android:text="Питомец не найдено"
         android:textColor="#ffffff"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_2"
-        android:layout_width="364dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
         android:fontFamily="@font/roboto_light"
         android:gravity="center"
-        android:text="Вы можете иметь неограниченного количество питомцев бесплатно!"
+        android:layout_marginTop="24dp"
+        android:text="Добавьте Питомец, нажав кнопку + сверху или кнопку ниже"
         android:textColor="#ffffff"
-        android:textSize="14sp"
+        android:textSize="18sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_1" />
 
     <Button
-        android:id="@+id/btn_create"
-        android:layout_width="120dp"
+        android:id="@+id/btn_create_first"
+        android:layout_width="192dp"
         android:layout_height="43dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/sh_color_bk_corners_2"
         android:fontFamily="@font/roboto_light"
-        android:text="Создать"
+        android:text="Создать первый"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,22 +72,14 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_2" />
 
     <ImageView
-        android:id="@+id/img_cat_gif"
+        android:id="@+id/im_wolf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/a_cat2_gif"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="64dp"
+        android:src="@drawable/a_wolf"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_create" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="24dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

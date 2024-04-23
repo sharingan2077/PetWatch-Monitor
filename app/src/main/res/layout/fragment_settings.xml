@@ -1,14 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    tools:context=".view.fragment.SettingsFragment"
+    android:background="@color/violate">
 
-    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="395dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="21dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="@+id/textView18"
+        app:layout_constraintEnd_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="@+id/textView18" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Мои данные"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <View
+        android:id="@+id/view23"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/pink_light"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/textView18" />
+
+
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Имя"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/view23"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"/>
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:id="@+id/et_breed"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sh_edit_text"
+        android:fontFamily="@font/roboto_light"
+        android:hint="17 апр. 2024 г., 13:46"
+        android:paddingStart="60dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/book_pink"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_breed"
+        app:layout_constraintTop_toTopOf="@+id/et_breed"
+        app:layout_constraintStart_toEndOf="@id/guideline"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

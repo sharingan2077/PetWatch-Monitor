@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationFragment">
+    android:background="#ffffff">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <View
+        android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="660dp"
+        android:background="@drawable/view_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="40sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:gravity="center"
+        android:text="Регистрация"
+        android:textColor="@color/violate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/name"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="16sp"
+        android:layout_width="280dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="47dp"
+        android:background="@drawable/sh_login"
+        android:hint="Имя"
+        android:inputType="textCapSentences"
+        android:paddingStart="14dp"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/email"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="16sp"
+        android:layout_width="280dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="37.5dp"
+        android:background="@drawable/sh_login"
+        android:hint="Фамилия"
+        android:inputType="textEmailAddress"
+        android:paddingStart="14dp"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/password"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="16sp"
+        android:layout_width="280dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="37.5dp"
+        android:background="@drawable/sh_login"
+        android:hint="Электронная почта"
+        android:inputType="textPassword"
+        android:paddingStart="14dp"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+
+    <View
+        android:id="@+id/btn_registration"
+        android:layout_width="241dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Продолжить"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_registration"
+        app:layout_constraintEnd_toEndOf="@+id/btn_registration"
+        app:layout_constraintStart_toStartOf="@+id/btn_registration"
+        app:layout_constraintTop_toTopOf="@+id/btn_registration" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Уже есть учетная запись?"
+        android:textColor="@color/violate"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_registration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
